@@ -23,3 +23,7 @@ docker run -d --name redis-container -p 6380:6379 redis
 ### Dependencies
 
 - [StackExchange.Redis 2.8.22]()
+
+### References
+
+- [Redis Docs](https://redis.io/docs/latest/get-started/)
