@@ -88,6 +88,16 @@ public class challenge01
         _db.SetAdd($"post:ids", post_id);
     }
 
+    public void DeletePost(int post_id)
+    {
+        var removingFields = _db.HashKeys($"post:{post_id}");
+
+        foreach (var field in removingFields)
+        {
+            _db.HashDelete($"post:{post_id}", field);
+        }
+    }
+
     private void AddTags(int post_id, string[] tags)
     {
         foreach (var tag in tags)
